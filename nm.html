@@ -37,8 +37,8 @@
 									
 									<!-- Logo -->
 										<div id="logo">
-											<h1><a href="#">Tony PERKINS</a></h1>
-											<span class="byline">Mathematician and sometime software developer</span>
+											<h1><a href="#"># Numerical methods with Ruby and GNUPlot</a></h1>
+											<span class="byline">Tony PERKINS</span>
 										</div>
 									<!-- /Logo -->
 									
@@ -49,16 +49,16 @@
 												<li><a href="#about">About</a></li>
 												<li><a href="#publications">Publications</a></li>
 												<li><a href="#education">Education</a></li>
-	                                            <li><span>Projects</span>
+	                                            <!--<li><span>Projects</span>
 													<ul>
 														  <li  class="active"><a href="#">Temp 1</a></li>
 														  <li  class="active"><a href="#">Temp 2</a></li>
 												  </ul>
-												</li>
+												</li>-->
 	                                            <li><span>Courses</span>
 													<ul>
 														  <li  class="active"><a href="http://toperkin.github.io/nm.html">Numerical methods with Ruby and GNUPlot</a></li>
-														  <li  class="active"><a href="#">Temp 3</a></li>
+														  <!--<li  class="active"><a href="#">Temp 3</a></li>-->
 												  </ul>
 												</li>												
 												<li><a href="#contact">Contact</a></li>
@@ -77,15 +77,30 @@
 		
 		<!-- Intro Wrapper -->
 			<div id="intro-wrapper" class="wrapper wrapper-style1">
-				<div class="title" id="about">About - Numerical methods with Ruby and GNUPlot</div>
+				<div class="title">About the course</div>
 				<div class="container">
 					<div class="row">
 						<div class="12u">
 							
 							<!-- Intro -->
-								<section id="intro">
-This course is scheduled to be taught Spring &#8217;15 at SHC.  This is a 400-level course for math majors with a pretty standard catalogue description.
-The class requires Calc 3 and an Intro to OOP Programming in C++.  
+								<section>
+<p>This course is scheduled to be taught Spring &#8217;15 at SHC.  This is a 400-level course for math majors with a pretty standard catalogue description.
+The class requires Calc 3 and an Intro to OOP Programming in C++.  Numerical methods in C with particular emphasis on linear algebra 
+and differential equations is the classic choice.  Often other topics such as the approximation of functions is introduced alongside functional analysis 
+in more advanced courses.  Since neither linear or DEQ are assumed I am attempting to stay away from these.  I want to focus more on root finding, interpolation,
+integration and differentiation.  I would like to compare the numerical (approximation, e.g. NumPy) algorithms to symbolic (exact, e.g. SymPy) algorithms.  
+Further, I want students to implement these algorithms and compare run-times.</p>
+
+<p>So, why Ruby?  C/C++ is the classic choice and the students have some experience with it.  Indeed if I were to implement this for use in a large scale
+professional setting, this would be the way to go, but we are not.  I anticipate at least a few seniors who haven't programmed since the OOP course their
+freshman year.  They will be very rusty.  I want to provide short clean looking code which handles all the technical bits and the students will simply write
+in the algorithm as a function.  This calls for a higher level language.  Python is the next obvious choice.  Python has all the algorithms implemented in 
+standard libraries and would at first seem very desirable.  As an instructor, I don't want to deal with the 2.x/3.x mess.  It isn't really a mess, if you 
+know a which version you are coding, one can easily hop around the internet and implement what you find.  But this isn't a "how to program" course and these
+students will have no experience with python and the 2.x/3.x would show up right away with "Hello world".  Also python and it's libraries are a little hard 
+to install.  Ruby is easy to install.  I really like the RailsInstaller.  Ruby is easy to read/write.  Ruby is quite trendy at the moment.  Also because Ruby really isn't used for numerical stuff that often,
+they will have trouble googling the answer.  I like when a program reads a file and produces an output.  GNUPlot works out of the box and easily provides 
+all the graphical support for a nice output png.</p>
 
 								</section>
 							<!-- /Intro -->
@@ -98,7 +113,7 @@ The class requires Calc 3 and an Intro to OOP Programming in C++.
 		
 		<!-- Main Wrapper -->
 			<div class="wrapper wrapper-style2">
-				<div class="title" id="publications">Publications</div>
+				<div class="title">Projects</div>
 				<div class="container">
 					<div class="row">
 						<div class="12u">
@@ -106,20 +121,8 @@ The class requires Calc 3 and an Intro to OOP Programming in C++.
 							<!-- Main -->
 								<div id="main">
 									
-									<p>
-									All of my research papers can be accessed via the <a href="http://arxiv.org/a/perkins_t_1" target="_blank">Arxiv</a> preprint server.  However, for the final version of the paper consult the journal where it is published.
-									</p>
-
-								<script type="text/javascript">
-								var arxiv_authorid="http://arxiv.org/a/perkins_t_1";
-								var arxiv_format="arxiv";
-								var arxiv_max_entries=0;
-								var arxiv_includeSummary=1;
-								</script>
-								<script type="text/javascript" src="http://arxiv.org/js/myarticles.js"></script>
-
-								<div id="arxivfeed"><center><h3><font color="red">Loading.....</font></h3></center></div>
-
+								<li> Set-up.  The students will install the software.  Provide a minimal tweak to some code and turn in an output png/log.
+								</li>
 
 									
 								</div>
@@ -133,7 +136,7 @@ The class requires Calc 3 and an Intro to OOP Programming in C++.
 		
 		<!-- Highlights Wrapper -->
 			<div class="wrapper wrapper-style3">
-				<div class="title" id="education">Education</div>
+				<div class="title" id="links">Links</div>
 				<div class="container">
 					<div class="row">
 						<div class="12u">
@@ -146,21 +149,21 @@ The class requires Calc 3 and an Intro to OOP Programming in C++.
 										<div class="row">
 											<div class="4u">
 												<section class="highlight highlight-one">
-													<a href="http://fav.me/d59i3b3" class="image image-full"><img src="images/GT2.jpg" alt="" /></a>
-													<h3><a href="#">Georgia Tech</a></h3>
-													<p>MS Computer Science, 2014-present</p>
+													<a href="http://fav.me/d59i3b3" class="image image-full"><img src="images/ri-logo.png" alt="" /></a>
+													<h3><a href="#">Rails Installer</a></h3>
+													<p>Easy to install on multiple platforms.<br />Includes Ruby, Rails, Github and more</p>
 													<ul class="actions">
-														<li><a href="http://www.gatech.edu/" class="button button-style1">Learn More</a></li>
+														<li><a href="http://railsinstaller.org/en" class="button button-style1">Learn More</a></li>
 													</ul>
 												</section>
 											</div>
 											<div class="4u">
 												<section class="highlight highlight-two">
-													<a href="http://fav.me/d4tqyby" class="image image-full"><img src="images/SU.jpg" alt="" /></a>
-													<h3><a href="#">Syracuse University</a></h3>
-													<p>PHD Mathematics, 2006-2011<br /> MS Mathematics, 2004-2006</p>
+													<a href="http://fav.me/d4tqyby" class="image image-full"><img src="images/gnuplot_logo.png" alt="" /></a>
+													<h3><a href="#">GNUPlot</a></h3>
+													<p>We will use this simple interface for all our plotting needs.<br />Very sturdy and easy to install on multiple platforms.</p>
 													<ul class="actions">
-														<li><a href="http://www.syr.edu/" class="button button-style1">Learn More</a></li>
+														<li><a href="http://www.gnuplot.info/" class="button button-style1">Learn More</a></li>
 													</ul>
 												</section>
 											</div>
