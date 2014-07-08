@@ -37,7 +37,7 @@
 									
 									<!-- Logo -->
 										<div id="logo">
-											<h1><a href="#"># Numerical methods with Ruby and GNUPlot</a></h1>
+											<h1><a href="#"># Numerical methods with python</a></h1>
 											<span class="byline">Tony PERKINS</span>
 										</div>
 									<!-- /Logo -->
@@ -45,10 +45,10 @@
 									<!-- Nav -->
 										<nav id="nav">
 											<ul>
-												<li class="current_page_item"><a href="index.html">Home</a></li>
-												<li><a href="#about">About</a></li>
-												<li><a href="#publications">Publications</a></li>
-												<li><a href="#education">Education</a></li>
+												<li><a href="http://toperkin.github.io/index.html">Home</a></li>
+												<li><a href="http://toperkin.github.io/#about">About</a></li>
+												<li><a href="http://toperkin.github.io/#publications">Publications</a></li>
+												<li><a href="http://toperkin.github.io/#education">Education</a></li>
 	                                            <!--<li><span>Projects</span>
 													<ul>
 														  <li  class="active"><a href="#">Temp 1</a></li>
@@ -57,11 +57,11 @@
 												</li>-->
 	                                            <li><span>Courses</span>
 													<ul>
-														  <li  class="active"><a href="http://toperkin.github.io/nm.html">Numerical methods with Ruby and GNUPlot</a></li>
+														  <li  class="active"><a href="http://toperkin.github.io/nm.html">Numerical methods with python</a></li>
 														  <!--<li  class="active"><a href="#">Temp 3</a></li>-->
 												  </ul>
 												</li>												
-												<li><a href="#contact">Contact</a></li>
+												<li><a href="http://toperkin.github.io/#contact">Contact</a></li>
 											</ul>
 										</nav>
 									<!-- /Nav -->
@@ -84,24 +84,12 @@
 							
 							<!-- Intro -->
 								<section>
-<p>This course is scheduled to be taught Spring &#8217;15 at SHC.  This is a 400-level course for math majors with a pretty standard catalogue description.
-The class requires Calc 3 and an Intro to OOP Programming in C++.  Numerical methods in C with particular emphasis on linear algebra 
-and differential equations is the classic choice.  Often other topics such as the approximation of functions is introduced alongside functional analysis 
-in more advanced courses.  Since neither linear or DEQ are assumed I am attempting to stay away from these.  I want to focus more on root finding, interpolation,
-integration and differentiation.  I would like to compare the numerical (approximation, e.g. NumPy) algorithms to symbolic (exact, e.g. SymPy) algorithms.  
-Further, I want students to implement these algorithms and compare run-times.</p>
+<p>This course is scheduled to be taught Spring &#8217;15 at SHC.  Students will have had one course on OOP programming and Calc 2.  I wanted a programming language
+that was easy to install across platforms, free, and has full featured plotting to display graphics.</p>
 
-<p>So, why Ruby?  C/C++ is the classic choice and the students have some experience with it.  Indeed if I were to implement this for use in a large scale
-professional setting, this would be the way to go, but we are not.  I anticipate at least a few seniors who haven't programmed since the OOP course their
-freshman year.  They will be very rusty.  I want to provide short clean looking code which handles all the technical bits and the students will simply write
-in the algorithm as a function.  This calls for a higher level language.  Python is the next obvious choice.  Python has all the algorithms implemented in 
-standard libraries and would at first seem very desirable.  As an instructor, I don't want to deal with the 2.x/3.x mess.  It isn't really a mess, if you 
-know a which version you are coding, one can easily hop around the internet and implement what you find.  But this isn't a "how to program" course and these
-students will have no experience with python and the 2.x/3.x would show up right away with "Hello world".  Also python and it's libraries are a little hard 
-to install.  Ruby is easy to install.  I really like the RailsInstaller.  Ruby is easy to read/write.  Ruby is quite trendy at the moment.  Also because Ruby really isn't used for numerical stuff that often,
-they will have trouble googling the answer.  I like when a program reads a file and produces an output.  GNUPlot works out of the box and easily provides 
-all the graphical support for a nice output png.</p>
 
+<p>I've decided to go with Python 2.7.  I tried the latest 3.4 but, at the time of this writing, matplotlib and some other popular libraries weren't compatible.
+  There is a fantastic Python installer from Enthought Canopy which includes all the popular science packages and an editor.</p>
 								</section>
 							<!-- /Intro -->
 							
@@ -122,8 +110,8 @@ all the graphical support for a nice output png.</p>
 								<div id="main">
 									
 									
-								<li> Set-up.  The students will install the software.  Provide a minimal tweak to some code and turn in an output png/log.								</li>
-								<li>Series expansions: from calculus to computation</li>
+								<li> Set-up.  The students will install the software.  Provide a minimal tweak to hw1.rb and turn in an output png.</li>
+								<li>Series expansions: from calculus to computation.  Fill in TODO in hw2.rb to implement Taylor expansions of exponential, cosine and arcsine functions</li>
 								<li>Integrals as sums and derivatives as differences</li>
 								<li>Interpolation, splines, and a second look at numerical calculus</li>
 								<li>Numerical methods for ODE, initial-value problems</li>
@@ -133,14 +121,14 @@ all the graphical support for a nice output png.</p>
 								<li>Least-squares approximation</li>
 								<li>Principal component analysis</li>
 															
-
+								
 
 							
 <h1>Trefethen's list of 13 classic papers in applied mathematics</h1>
-First, this week's Historian distributed a handout containing information he/she had obtained about the historical context of the paper, including 
+<p>First, this week's Historian distributed a handout containing information he/she had obtained about the historical context of the paper, including 
 biographical information about the author(s) and a plot of citations as a function of time. Next, the Mathematician gave a presentation of some of 
 the central ideas of the paper. Third and fourth, two Experimentalists reported the results of Ruby experiments conducted to illustrate 
-some of the properties of the algorithm under discussion.
+some of the properties of the algorithm under discussion.</p>
 <ul>
 <li>
 J.W. Cooley and J.W. Tukey,
@@ -257,32 +245,34 @@ simulations</a>,"
 									<div>
 										<div class="row">
 											<div class="4u">
-												<section class="highlight highlight-one">
-													<a href="http://fav.me/d59i3b3" class="image image-full"><img src="images/ri-logo.png" alt="" /></a>
-													<h3><a href="#">Rails Installer</a></h3>
-													<p>Easy to install on multiple platforms.<br />Includes Ruby, Rails, Github and more</p>
-													<ul class="actions">
-														<li><a href="http://railsinstaller.org/en" class="button button-style1">Learn More</a></li>
-													</ul>
-												</section>
-											</div>
-											<div class="4u">
 												<section class="highlight highlight-two">
-													<a href="http://fav.me/d4tqyby" class="image image-full"><img src="images/gnuplot_logo.png" alt="" /></a>
-													<h3><a href="#">GNUPlot</a></h3>
-													<p>We will use this simple interface for all our plotting needs.<br />Very sturdy and easy to install on multiple platforms.</p>
+													<a href="http://fav.me/d4tqyby" class="image image-full"><img src="images/python-logo.png" alt="" /></a>
+													<h3><a href="#">Python</a></h3>
+													<p>We will use Python 2.7 as our main programming language.</p>
 													<ul class="actions">
-														<li><a href="http://www.gnuplot.info/" class="button button-style1">Learn More</a></li>
+														<li><a href="https://www.python.org/" class="button button-style1">Learn More</a></li>
 													</ul>
 												</section>
 											</div>
 											<div class="4u">
 												<section class="highlight highlight-three">
-													<a href="http://fav.me/d5w2dot" class="image image-full"><img src="images/uaf.jpg" alt="" /></a>
-													<h3><a href="#">University of Alaska Fairbanks</a></h3>
-													<p>BS Computer Science, 2001-2004 <br /> BS Mathematics, 2001-2004</p>
+													<a href="http://fav.me/d5w2dot" class="image image-full"><img src="images/canopy-logo.png" alt="" /></a>
+													<h3><a href="#">Enthought Canopy</a></h3>
+													<p>One-click Python deployment with more than 70 pre-built and tested Python packages, 
+													including the core scientific and analytic packages SciPy, NumPy, Pandas, Matplotlib, and IPython!  It also includes an editor.  We install the 
+													Canopy Express (=free) version.</p>
 													<ul class="actions">
-														<li><a href="http://www.uaf.edu/" class="button button-style1">Learn More</a></li>
+														<li><a href="https://store.enthought.com/" class="button button-style1">Learn More</a></li>
+													</ul>
+												</section>
+											</div>
+											<div class="4u">
+												<section class="highlight highlight-one">
+													<a href="http://fav.me/d59i3b3" class="image image-full"><img src="images/matplotlib.png" alt="" /></a>
+													<h3><a href="#">MatPlotLib</a></h3>
+													<p>Our primary means of displaying our results.</p>
+													<ul class="actions">
+														<li><a href="http://matplotlib.org/" class="button button-style1">Learn More</a></li>
 													</ul>
 												</section>
 											</div>
