@@ -132,13 +132,17 @@ class: center, middle, inverse
 .footnote[Go to directly to [course site](http://toperkin.github.io/nm.html)]
 ---
 ## What is it and why use it?
+
 ---
 layout: false
 .left-column[
-  ## Numerical methods
+  ## What is it?
 ]
 .right-column[
-  This course analyzed the basic techniques for the efficient numerical solution of problems in science and engineering. Topics spanned:
+  ### Numerical methods
+
+  This course analyzed the basic techniques for the efficient numerical solution
+  of problems in science and engineering. Topics spanned:
 
 - Root finding
 
@@ -156,7 +160,6 @@ layout: false
 
 - Optimization
 
-- Many many more
 .footnote[.red[*] often become individual course sequences.]
 ]
 ---
@@ -167,86 +170,151 @@ layout: false
 .right-column[
 Some problems can not be solved exactly:
 
-- $\int e^{-x^2} dx$
+- <code>`\(\int_0^1 e^{-x^2} dx\)`</code>
 
-- Do some basic styling
+- <code>`\(\cos(x) = x \)`</code>
+
+<!--
+<pre><code>'''python
+
+def fib(n):
+    return n*fib(n-1)
+'''</code></pre>-->
+
+- Find the roots of a polynomial of degree 5 or higher (Abel-Ruffini Theorem)
+
+- Solving some differential equations
+
 
 And some simply are very slow:
 
-- Easily collaborate with others
+- Invert a matrix
 
-- Share with and show to everyone
+    - Solve linear system
 
-Then remark might be perfect for your next.red[*] slideshow!
+    - Eigenvalue problems
 
-.footnote[.red[*] You probably want to convert existing slideshows as well]
+- Travelling Salesman
+
+
+Since we are approximating solutions, we will also be concerned with the **rate of
+convergence** and **estimating error**.
 ]
----
-.left-column[
-  ## What is it?
-  ## Why use it?
-]
-.right-column[
-As the slideshow is expressed using Markdown, you may:
 
-- Focus on the content, expressing yourself in next to plain text not worrying what flashy graphics and disturbing effects to put where
-
-As the slideshow is actually an HTML document, you may:
-
-- Display it in any decent browser
-
-- Style it using regular CSS, just like any other HTML content
-
-- Use it offline!
-
-As the slideshow is contained in a plain file, you may:
-
-- Store it wherever you like; on your computer, hosted from your Dropbox, hosted on Github Pages alongside the stuff you're presenting...
-
-- Easily collaborate with others, keeping track of changes using your favourite SCM tool, like Git or Mercurial
-]
 ---
 template: inverse
 
-## How does it work, then?
+## You will be programming.
 ---
 name: how
 
-.left-column[
-  ## How does it work?
-### - Markdown
-]
-.right-column[
-A Markdown-formatted chunk of text is transformed into individual slides by JavaScript running in the browser:
+## In Python!
 
-```remark
-# Slide 1
-This is slide 1
-
+![Python wins](images/codeeval2014.jpg)
 ---
 
-# Slide 2
-This is slide 2
-```
+.left-column[
+  ## A note of caution about python
 
-.slides[
-  .first[
-  ### Slide 1
-  This is slide 1
-  ]
-  .second[
-  ### Slide 2
-  This is slide 2
-  ]
 ]
 
-Regular Markdown rules apply with only a single exception:
+.right-column[
+- There are significant differences between 2.x and 3.x versions of python.
 
-  - A line containing three dashes constitutes a new slide
-  (not a horizontal rule, `&lt;hr /&gt;`)
+- For a while people were advocating staying with 2.x until 3.x matured.  It has.
 
-Have a look at the [Markdown website](http://daringfireball.net/projects/markdown/) if you're not familiar with Markdown formatting.
+- Some of the most popular "Teach yourself python" websites take this approach.
+
+- Part of why they are popular, is they've been around the longest.  They're old
+sites.  They like the old version.
+
+- All of the code I provide will be tested on Python 3.4 or better.
+
+- When looking stuff up on the internet be cautious of *old code*, it may not work with the latest version.
 ]
+---
+
+.left-column[
+  ## A note of caution about python
+
+  ## Your most common syntax error
+
+]
+
+.right-column[
+
+- In python, whitespace is important.
+
+- It controls scope.
+
+.pull-left[
+
+<pre><code>```python
+
+  def fact(n):
+      if (n == 0):
+          return 1
+      else:
+          return n * fact(n-1)
+
+
+
+```</code></pre>
+]
+.pull-right[
+
+<pre><code>```c
+
+  long factorial(int n)
+  {
+    if (n == 0)
+      return 1;
+    else
+      return(n * factorial(n-1));
+  }
+
+```</code></pre>
+]
+
+Observations:
+
+- Notice {} are not needed to define the length of the function in python.
+
+- The indent is 4 spaces.  This is what controls the scope in python.
+
+- _If you mix tabs and spaces, your code will not run._
+
+- In python type is dynamically assigned.  Python knows **n** is an "int" and **fact** returns a "long"
+
+]
+---
+.left-column[
+##Homework
+]
+
+.right-column[
+Install Python and important libraries.red[*]
+- [Anaconda python](http://www.continuum.io/) has a free installer which gives us all we need
+
+- Remember: Download version Python 3.4 or higher
+
+
+<img src="images/continuum_analytics_logo.png" alt="Continuum Analytics logo" style="width: 500px;"/>
+
+.footnote[.red[*] NumPy, SciPy, SymPy, Pandas, Matplotlib...]
+]
+---
+## (Perhaps a little Julia too - optional)
+
+<img src="images/julia.png" alt="Julia logo" style="width: 200px;"/>
+
+![](images/julia-bench.png)
+
+- C preformance = 1
+
+- New language out of MIT.  Very well adapted to numerical methods/scientific computing.  Looks a lot like python.
+
+.footnote[Go to directly to [Julia site](http://julialang.org/)]
 ---
 .left-column[
   ## How does it work?
@@ -256,25 +324,7 @@ Have a look at the [Markdown website](http://daringfireball.net/projects/markdow
 .right-column[
 A simple HTML document is needed for hosting the styles, Markdown and the generated slides themselves:
 
-```xml
-<!DOCTYPE html>
-<html>
-  <head>
-    <style type="text/css">
-      /* Slideshow styles */
-    </style>
-  </head>
-  <body>
-*    <textarea id="source">
-      <!-- Slideshow Markdown -->
-    &lt;/textarea&gt;
-*    <script type="text/javascript" src="remark.js">
-    </script>
-    <script type="text/javascript">
-*      var slideshow = remark.create();
-    </script>
-  </body>
-</html>
+
 ```
 
 You may download remark to have your slideshow not depend on any online resources, or reference the [latest version](http://remarkjs.com/downloads/remark-latest.min.js) online directly.
@@ -471,27 +521,24 @@ template: inverse
 
 Slideshow created using [remark](http://github.com/gnab/remark).
     </textarea>
-    <script src="http://gnab.github.com/remark/downloads/remark-0.6.5.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
-      var hljs = remark.highlighter.engine;
-    </script>
-    <script src="remark.language.js" type="text/javascript"></script>
-    <script type="text/javascript">
-      var slideshow = remark.create({
-          highlightStyle: 'monokai',
-          highlightLanguage: 'remark'
-        }) ;
-    </script>
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-44561333-1']);
-      _gaq.push(['_trackPageview']);
+<script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+<script type="text/javascript">
+  var slideshow = remark.create();
 
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
+  // Setup MathJax
+  MathJax.Hub.Config({
+      tex2jax: {
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+  });
+  MathJax.Hub.Queue(function() {
+      $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+          return(elem.SourceElement());
+      }).parent().addClass('has-jax');
+  });
+
+  MathJax.Hub.Configured();
+</script>
   </body>
 </html>
