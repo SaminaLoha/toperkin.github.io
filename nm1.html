@@ -301,6 +301,8 @@ Install Python and important libraries.red[*]
 
 <img src="images/continuum_analytics_logo.png" alt="Continuum Analytics logo" style="width: 500px;"/>
 
+- I'll post a file `hw1.py` for you to test your installation against.
+
 .footnote[.red[*] NumPy, SciPy, SymPy, Pandas, Matplotlib...]
 ]
 ---
@@ -316,186 +318,193 @@ Install Python and important libraries.red[*]
 
 .footnote[Go to directly to [Julia site](http://julialang.org/)]
 ---
+template: inverse
+
+## Course grading and assignments.
+
+---
 .left-column[
-  ## How does it work?
-  ### - Markdown
-  ### - Inside HTML
+## Structure of this course
+
 ]
 .right-column[
-A simple HTML document is needed for hosting the styles, Markdown and the generated slides themselves:
+- (70%) Regular small projects:
 
+     - at least one a week
 
-```
+     - less than 20 lines of code each.
 
-You may download remark to have your slideshow not depend on any online resources, or reference the [latest version](http://remarkjs.com/downloads/remark-latest.min.js) online directly.
+- (30%) A final project.
+
+- Every assignment comes with options for **bonus**:
+
+     - A Julia version of the assignment
+
+     - Feature implementation, e.g.
+
+         - Animations
+
+         - Users interactivity
+
+     - Improved algorithm
+
+     - SymPy research for algorithm which implements an exact solver and comparision.
+
+     - In general, extra points for any work which extends the assignment
+
 ]
 ---
 template: inverse
 
-## Of course, Markdown can only go so far.
----
-.left-column[
-  ## Markdown extensions
-]
-.right-column[
-To help out with slide layout and formatting, a few Markdown extensions have been included:
-
-- Slide properties, for naming, styling and templating slides
-
-- Content classes, for styling specific content
-
-- Syntax highlighting, supporting a range of languages
-]
+## A problem.
 
 ---
+
 .left-column[
-  ## Markdown extensions
-  ### - Slide properties
+  ## Julia.
 ]
 .right-column[
-Initial lines containing key-value pairs are extracted as slide properties:
+Julia is dynamically typed, but the types are fixed~ish and this lets C-type errors sneak in.
+- Sidebar: The closer to machine code you get, the faster your code will be run
+because you have more control and can optimize.  However "with great power, comes
+great responsibility."  Which means in Fortran, C, Julia... you can get into hot water.
 
-```remark
-name: agenda
-class: middle, center
 
-# Agenda
 
-The name of this slide is {{ name }}.
-```
+###### factorial_example.jl
+<pre><code>```julia
 
-Slide properties serve multiple purposes:
-
-* Naming and styling slides using properties `name` and `class`
-
-* Using slides as templates using properties `template` and `layout`
-
-* Expansion of `{{ property }}` expressions to property values
-
-See the [complete list](https://github.com/gnab/remark/wiki/Slide-Properties) of slide properties.
-]
----
-.left-column[
-  ## Markdown extensions
-  ### - Slide properties
-  ### - Content classes
-]
-.right-column[
-Any occurences of one or more dotted CSS class names followed by square brackets are replaced with the contents of the brackets with the specified classes applied:
-
-```remark
-.footnote[.red.bold[*] Important footnote]
-```
-
-Resulting HTML extract:
-
-```xml
-<span class="footnote">
-  <span class="red bold">*</span> Important footnote
-</span>
-```
-]
----
-.left-column[
-  ## Markdown extensions
-  ### - Slide properties
-  ### - Content classes
-  ### - Syntax Highlighting
-]
-.right-column[
-Code blocks can be syntax highlighted by specifying a language from the set of [supported languages](https://github.com/gnab/remark/wiki/Configuration-Options#wiki-highlighting).
-
-Using [GFM](http://github.github.com/github-flavored-markdown/) fenced code blocks you can easily specify highlighting language:
-
-.pull-left[
-
-<pre><code>```javascript
-function add(a, b)
-  return a + b
+function fact(n)
+    if n == 0
+        return 1
+    end
+    return n*fact(n-1)
 end
-```</code></pre>
-]
-.pull-right[
 
-<pre><code>```ruby
-def add(a, b)
-  a + b
+for n =1:21
+  println("The Factorial of " , n , " is ", fact(n))
 end
+
+
 ```</code></pre>
 ]
 
-A number of highlighting [styles](https://github.com/gnab/remark/wiki/Configuration-Options#wiki-highlighting) are available, including several well-known themes from different editors and IDEs.
-
-]
 ---
 .left-column[
-  ## Presenter mode
+## The output
+
 ]
 .right-column[
-To help out with giving presentations, a presenter mode comprising the
-following features is provided:
+<pre><code>```output
 
-- Display of slide notes for the current slide, to help you remember
-  key points
+> julia factorial_example.jl
 
-- Display of upcoming slide, to let you know what's coming
+The Factorial of 1 is 1
+The Factorial of 2 is 2
+The Factorial of 3 is 6
+The Factorial of 4 is 24
+The Factorial of 5 is 120
+The Factorial of 6 is 720
+The Factorial of 7 is 5040
+The Factorial of 8 is 40320
+The Factorial of 9 is 362880
+The Factorial of 10 is 3628800
+The Factorial of 11 is 39916800
+The Factorial of 12 is 479001600
+The Factorial of 13 is 6227020800
+The Factorial of 14 is 87178291200
+The Factorial of 15 is 1307674368000
+The Factorial of 16 is 20922789888000
+The Factorial of 17 is 355687428096000
+The Factorial of 18 is 6402373705728000
+The Factorial of 19 is 121645100408832000
+The Factorial of 20 is 2432902008176640000
+The Factorial of 21 is -4249290049419214848
 
-- Cloning of slideshow for viewing on extended display
+```</code></pre>
 ]
+
+
 ---
 .left-column[
-  ## Presenter mode
-  ### - Inline notes
+
+## Under the hood:
 ]
 .right-column[
-Just like three dashes separate slides,
-three question marks separate slide content from slide notes:
+###### fact_explained.jl
 
-```
-Slide 1 content
+<pre><code>```julia
+println("The smallest integer Julia
+        handles is  ", typemin(Int64), "\n" )
 
-*???
+println("The largest integer Julia
+        handles is  ", typemax(Int64), "\n"  )
 
-Slide 1 notes
+println("A little too small and stuff
+        goes wrong  " , typemin(Int64) - 1, "\n" )
 
----
+println("A little too big also ruins
+        your world  ", typemax(Int64) +1, "\n" )
 
-Slide 2 content
+```</code></pre>
 
-*???
+###### Here is the output:
+<pre><code>```output
+> julia fact_explained.jl
 
-Slide 2 notes
-```
+The smallest integer Julia handles is  -9223372036854775808
 
-Slide notes are also treated as Markdown, and will be converted in the
-same manner slide content is.
+The largest integer Julia handles is  9223372036854775807
 
-Pressing __P__ will toggle presenter mode.
+A little too small and stuff goes wrong  9223372036854775807
+
+A little too big also ruins your world  -9223372036854775808
+
+
+```</code></pre>
 ]
-???
-Congratulations, you just toggled presenter mode!
+---
+template: inverse
 
-Now press __P__ to toggle it back off.
+## Of course, in the real world this never comes up, right?
 ---
 .left-column[
-  ## Presenter mode
-  ### - Inline notes
-  ### - Cloned view
+  ### Patriot Missle
 ]
 .right-column[
-Presenter mode of course makes no sense to the audience.
+- The Patriot Missile failure.red[*], in Dharan, Saudi Arabia, on February 25, 1991 which
+resulted in 28 deaths, is ultimately attributable to poor handling of rounding errors.
 
-Creating a cloned view of your slideshow lets you:
 
-- Move the cloned view to the extended display visible to the audience
-
-- Put the original slideshow in presenter mode
-
-- Navigate as usual, and the cloned view will automatically keep up with the original
-
-Pressing __C__ will open a cloned view of the current slideshow in a new
-browser window.
+.footnote[.red[*] Red the details [here](https://www.ima.umn.edu/~arnold/disasters/patriot.html) ]
 ]
+
+---
+.left-column[
+  ### Patriot Missle
+  ### Spleipner A
+]
+.right-column[
+- The sinking of the Sleipner A.red[*] offshore platform in Gandsfjorden near Stavanger,
+Norway, on August 23, 1991, resulted in a loss of nearly one billion dollars. It
+was found to be the result of inaccurate finite element analysis.
+
+.footnote[.red[*] Red the details [here](https://www.ima.umn.edu/~arnold/disasters/sleipner.html) ]
+]
+
+---
+.left-column[
+  ### Patriot Missle
+  ### Sleipner A
+  ### Ariane 5 rocket
+]
+.right-column[
+- The explosion of the Ariane 5 rocket.red[*] just after lift-off on its maiden voyage
+off French Guiana, on June 4, 1996, was ultimately the consequence of a simple overflow.
+
+.footnote[.red[*] Red the details [here](http://www.around.com/ariane.html) ]
+]
+
 ---
 template: inverse
 
@@ -507,19 +516,22 @@ template: inverse
 .right-column[
 Getting up and running is done in only a few steps:
 
-1. Visit the [project site](http://github.com/gnab/remark)
+1. Install [Anaconda python](http://www.continuum.io/) version 3.4 or better.
 
-2. Follow the steps in the Getting Started section
+2. Code discussed in lectures and assignments can be found on my [Github](https://github.com/toperkin/NumericalMethodsCourseCode) account.
 
-For more information on using remark, please check out the [wiki](https://github.com/gnab/remark/wiki) pages.
+3. Fill in the **TODO** statements and run **hw1.py**
+
+4. Check out the offical course [page](http://toperkin.github.io/nm.html) for an outline and details of the final project.
+
+5. Skim over Chapters 1 and 2 from our [text](http://www.ams.org/bookstore-getitem/item=amstext-2)
 ]
 ---
 name: last-page
 template: inverse
 
 ## That's all folks (for now)!
-
-Slideshow created using [remark](http://github.com/gnab/remark).
+These slides were prepared by [Tony Perkins](http://toperkin.github.io/nm1.html#1)
     </textarea>
 <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
 <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
