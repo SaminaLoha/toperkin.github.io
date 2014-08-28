@@ -24,7 +24,7 @@ paginate:         1
 version:          1.0.0
 
 github:
-  repo:           github.com/toperkin/toperkin.github.io/gtblob/
+  repo:           github.com/toperkin/toperkin.github.io/gtblog/
 
 # This is the list of pages to include in the header of the website.
 pages_list:
