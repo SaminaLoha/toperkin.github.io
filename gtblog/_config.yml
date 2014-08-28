@@ -12,6 +12,7 @@ permalink:        pretty
 title:            Tony Perkins
 tagline:          'Blog of OMSCS at the Georgia Institute of Technology'
 url:              http://www.toperkin.github.io/
+baseurl:          http://www.toperkin.github.io/gtblog/
 shorturl:         toperkin.github.io/
 
 author:
