@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Tony Perkins</title>
- <link href="http://www.toperkin.github.io/gtblog//gtblog/atom.xml" rel="self"/>
- <link href="http://www.toperkin.github.io/gtblog//gtblog/"/>
- <updated>2014-08-27T21:54:49-05:00</updated>
- <id>http://www.toperkin.github.io/gtblog/</id>
+ <link href="http://www.toperkin.github.io//atom.xml" rel="self"/>
+ <link href="http://www.toperkin.github.io/"/>
+ <updated>2014-08-27T22:00:57-05:00</updated>
+ <id>http://www.toperkin.github.io/</id>
  <author>
    <name>Tony Perkins</name>
    <email></email>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>Studying Physics at Marlboro College in the Hills of Vermont</title>
-   <link href="http://www.toperkin.github.io/gtblog//gtblog//physics-marlboro-college-vermont"/>
+   <link href="http://www.toperkin.github.io//physics-marlboro-college-vermont"/>
    <updated>2013-02-14T00:00:00-06:00</updated>
-   <id>http://www.toperkin.github.io/gtblog//physics-marlboro-college-vermont</id>
+   <id>http://www.toperkin.github.io//physics-marlboro-college-vermont</id>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/marlboro_community_photo_2008-940x626.jpg&quot; alt=&quot;The Marlboro College 2008 Community Photo. I am on the very right
 three rows from the
 bottom.&quot;&gt;&lt;/p&gt;
@@ -67,9 +67,9 @@ You can view my senior thesis below.  You can read my senior thesis
  
  <entry>
    <title>Quantifying the Health Impact of Solar Particle Events on Astronauts With SStoRM: The Solar Storm Radiation Model</title>
-   <link href="http://www.toperkin.github.io/gtblog//gtblog//health-impact-solar-particle-events-sstorm"/>
+   <link href="http://www.toperkin.github.io//health-impact-solar-particle-events-sstorm"/>
    <updated>2013-02-14T00:00:00-06:00</updated>
-   <id>http://www.toperkin.github.io/gtblog//health-impact-solar-particle-events-sstorm</id>
+   <id>http://www.toperkin.github.io//health-impact-solar-particle-events-sstorm</id>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/ron_turner_anser_2007-580x872.jpg&quot; alt=&quot;My SEAP internship adviser Ron Turner in front of a poster for SStoRM.&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;I participated in the &lt;a href=&quot;http://seap.asee.org/program_details&quot;&gt;Science &amp;amp; Engineering Apprentice Program&lt;/a&gt; during the summer after my senior year of high school and again the following summer. I worked for &lt;a href=&quot;http://www.anser.org/turner-r-publications&quot;&gt;Dr. Ronald Turner&lt;/a&gt; at &lt;a href=&quot;http://www.anser.org/&quot;&gt;ANSER&lt;/a&gt;. He studies solar radiation from &lt;a href=&quot;http://helios.gsfc.nasa.gov/sep.html&quot;&gt;solar particle events&lt;/a&gt; and their health impact on astronauts in outer space. One practical application of his research is the protection of astronauts in outer space from dangerous radiation.&lt;/p&gt;
@@ -90,9 +90,9 @@ You can view my senior thesis below.  You can read my senior thesis
  
  <entry>
    <title>Calibrating X-ray Powder Diffraction Data at the Stanford Synchrotron Radiation Laboratory</title>
-   <link href="http://www.toperkin.github.io/gtblog//gtblog//calibrating-powder-diffraction-data-ssrl"/>
+   <link href="http://www.toperkin.github.io//calibrating-powder-diffraction-data-ssrl"/>
    <updated>2013-02-14T00:00:00-06:00</updated>
-   <id>http://www.toperkin.github.io/gtblog//calibrating-powder-diffraction-data-ssrl</id>
+   <id>http://www.toperkin.github.io//calibrating-powder-diffraction-data-ssrl</id>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/IMG_1524b.jpg&quot; alt=&quot;Here I am at the end of the 2007 SULI internship with my adviser
 Sam Webb.&quot;&gt;&lt;/p&gt;
 
@@ -168,9 +168,9 @@ and Citizenship.&quot;&gt;&lt;/p&gt;
  
  <entry>
    <title>Simulating the Deep Lens Survey at UC Davis</title>
-   <link href="http://www.toperkin.github.io/gtblog//gtblog//simulating-deep-lens-survey-davis"/>
+   <link href="http://www.toperkin.github.io//simulating-deep-lens-survey-davis"/>
    <updated>2013-02-12T00:00:00-06:00</updated>
-   <id>http://www.toperkin.github.io/gtblog//simulating-deep-lens-survey-davis</id>
+   <id>http://www.toperkin.github.io//simulating-deep-lens-survey-davis</id>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/2006_reu_internship_simulated_data-940x544.jpg&quot; alt=&quot;The simulated stars and galaxies from my DLS simulation I created during my 2006 physics REU.&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;During the summer of 2006, I participated in a &lt;a href=&quot;http://london.ucdavis.edu/%7Ereu/REU06/reu06.html&quot;&gt;physics REU at UC

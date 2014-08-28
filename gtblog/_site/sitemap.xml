@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://www.toperkin.github.io/gtblog/</loc>
-    <lastmod>2014-08-27T21:54:49-05:00</lastmod>
+    <loc>http://www.toperkin.github.io/</loc>
+    <lastmod>2014-08-27T22:00:57-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
     <url>
-      <loc>http://www.toperkin.github.io/gtblog//physics-marlboro-college-vermont</loc>
+      <loc>http://www.toperkin.github.io//physics-marlboro-college-vermont</loc>
       
         <lastmod>2013-02-14T00:00:00-06:00</lastmod>
       
@@ -17,7 +17,7 @@
     </url>
   
     <url>
-      <loc>http://www.toperkin.github.io/gtblog//health-impact-solar-particle-events-sstorm</loc>
+      <loc>http://www.toperkin.github.io//health-impact-solar-particle-events-sstorm</loc>
       
         <lastmod>2013-02-14T00:00:00-06:00</lastmod>
       
@@ -26,7 +26,7 @@
     </url>
   
     <url>
-      <loc>http://www.toperkin.github.io/gtblog//calibrating-powder-diffraction-data-ssrl</loc>
+      <loc>http://www.toperkin.github.io//calibrating-powder-diffraction-data-ssrl</loc>
       
         <lastmod>2013-02-14T00:00:00-06:00</lastmod>
       
@@ -35,7 +35,7 @@
     </url>
   
     <url>
-      <loc>http://www.toperkin.github.io/gtblog//simulating-deep-lens-survey-davis</loc>
+      <loc>http://www.toperkin.github.io//simulating-deep-lens-survey-davis</loc>
       
         <lastmod>2013-02-12T00:00:00-06:00</lastmod>
       
@@ -45,7 +45,7 @@
   
   
   <url>
-    <loc>http://www.toperkin.github.io/gtblog//about/</loc>
+    <loc>http://www.toperkin.github.io//about/</loc>
     
       <lastmod>2014-08-27</lastmod>
     
@@ -58,7 +58,7 @@
   </url>
   
   <url>
-    <loc>http://www.toperkin.github.io/gtblog//archive/</loc>
+    <loc>http://www.toperkin.github.io//archive/</loc>
     
       <lastmod>2014-08-27</lastmod>
     
@@ -71,7 +71,7 @@
   </url>
   
   <url>
-    <loc>http://www.toperkin.github.io/gtblog//atom.xml</loc>
+    <loc>http://www.toperkin.github.io//atom.xml</loc>
     
       <lastmod>2014-08-27</lastmod>
     
@@ -84,7 +84,7 @@
   </url>
   
   <url>
-    <loc>http://www.toperkin.github.io/gtblog//</loc>
+    <loc>http://www.toperkin.github.io//</loc>
     
       <lastmod>2014-08-27</lastmod>
     
@@ -97,7 +97,7 @@
   </url>
   
   <url>
-    <loc>http://www.toperkin.github.io/gtblog//page2/</loc>
+    <loc>http://www.toperkin.github.io//page2/</loc>
     
       <lastmod>2014-08-27</lastmod>
     
@@ -110,7 +110,7 @@
   </url>
   
   <url>
-    <loc>http://www.toperkin.github.io/gtblog//page3/</loc>
+    <loc>http://www.toperkin.github.io//page3/</loc>
     
       <lastmod>2014-08-27</lastmod>
     
@@ -123,7 +123,7 @@
   </url>
   
   <url>
-    <loc>http://www.toperkin.github.io/gtblog//page4/</loc>
+    <loc>http://www.toperkin.github.io//page4/</loc>
     
       <lastmod>2014-08-27</lastmod>
     
