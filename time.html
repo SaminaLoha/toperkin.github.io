@@ -1,0 +1,239 @@
+<!DOCTYPE HTML>
+<!--
+	Escape Velocity 2.5 by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Tony PERKINS</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,900" rel="stylesheet" />
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.dropotron.min.js"></script>
+		<script src="js/config.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-panels.min.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
+		<script type="text/javascript">
+  window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer",
+    {
+      // title:{
+      // text: "Timeline"
+      // },
+		  dataPointWidth: 10,
+			axisX: {
+				interval:10,
+			},
+			axisY:{
+					labelAngle: -50,
+					minimum: 1983,
+					valueFormatString: "####",
+			},
+			toolTip:{
+				content: "{name}: {y[0]} -- {y[1]}"
+			},
+      data: [
+      {
+        type: "rangeBar",
+				legendText: "Texas",
+				showInLegend: "true",
+				name: "Texas",
+         dataPoints: [
+        { x: 10 , y: [1983,1993], label: "Location"},
+        ]
+      },
+			{
+				type: "rangeBar",
+				legendText: "Alabama",
+				showInLegend: "true",
+				name: "Alabama",
+				 dataPoints: [
+				{ x: 10 , y: [1993,1998], label: "Location"},
+				{ x: 10 , y: [2011,2016.9999], label: "Location"}
+				]
+			},
+			{
+				type: "rangeBar",
+				legendText: "Washington",
+				showInLegend: "true",
+				name: "Washington",
+				 dataPoints: [
+				{ x: 10 , y: [1998,2001], label: "Location"},
+				]
+			},
+			{
+				type: "rangeBar",
+				legendText: "Alaska",
+				showInLegend: "true",
+				name: "Alaska",
+				 dataPoints: [
+				{ x: 10 , y: [2001,2004], label: "Location"},
+				]
+			},
+			{
+				type: "rangeBar",
+				legendText: "New York",
+				showInLegend: "true",
+				name: "New York",
+				dataPoints: [
+				{ x: 10 , y: [2004,2011], label: "Location"},
+				]
+			},
+
+			{
+				type: "rangeBar",
+				name: "University of Alaska Fairbanks <br /> UAF",
+				 dataPoints: [
+				{ x: 20 , y: [2001,2004], label: "Education"},
+				]
+			},
+			{
+				type: "rangeBar",
+				name: "Syracuse University <br />  SU",
+				 dataPoints: [
+				{ x: 20 , y: [2004,2011], label: "Education"},
+				]
+			},
+			{
+				type: "rangeBar",
+				name: "Georgia Institute of Technology <br /> GT",
+				 dataPoints: [
+				{ x: 20 , y: [2014.5,2016.9], label: "Education"},
+				]
+			},
+
+			{
+				type: "rangeBar",
+								name: "Syracuse University <br /> Teaching Assistant",
+				 dataPoints: [
+				{ x: 30 , y: [2004,2011], label: "Employment"},
+				]
+			},
+			{
+				type: "rangeBar",
+				name: "Spring Hill Collge <br /> Department Chair and Professor of Mathematics",
+				 dataPoints: [
+				{ x: 30 , y: [2011,2015], label: "Employment"},
+				]
+			},
+			{
+				type: "rangeBar",
+				name: "Pathwright <br />  Software Developer",
+				 dataPoints: [
+				{ x: 30 , y: [2014,2016.1], label: "Employment"},
+				]
+			},
+			{
+				type: "rangeBar",
+					name: "Autonomy Engine <br />  Data Scientist",
+				 dataPoints: [
+				{ x: 30 , y: [2014.5,2015], label: "Employment"},
+				]
+			},
+			{
+				type: "rangeBar",
+				name: "Redlion <br />  Software Engineer",
+				 dataPoints: [
+				{ x: 30 , y: [2015,2016.9999], label: "Employment"},
+				]
+			}
+
+      ]
+    });
+
+    chart.render();
+  }
+  </script>
+ <script type="text/javascript" src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
+	</head>
+	<body class="homepage">
+
+		<!-- Header Wrapper -->
+			<div id="header-wrapper" class="wrapper">
+				<div class="container">
+					<div class="row">
+						<div class="12u">
+
+							<!-- Header -->
+								<div id="header">
+
+									<!-- Logo -->
+										<div id="logo">
+											<h1><a href="#">Tony PERKINS</a></h1>
+											<span class="byline">Mathematician and software developer</span>
+										</div>
+									<!-- /Logo -->
+
+									<!-- Nav -->
+										<nav id="nav">
+											<ul>
+												<li class="current_page_item"><a href="index.html">Home</a></li>
+												<li><a href="#about">About</a></li>
+												<li><a href="#publications">Publications</a></li>
+												<li><a href="#education">Education</a></li>
+	                      <li><span>Projects</span>
+													<ul>
+														  <li  class="active"><a href="#">Temp 1</a></li>
+														  <li  class="active"><a href="#">Temp 2</a></li>
+												  </ul>
+												</li>
+	                                            <!-- <li><span>Research</span>
+													<ul>
+														  <li><a href="http://reinfor.isomorphism.io">Reinforcement Learning</a></li>
+												  </ul>
+												</li> -->
+												<li><a href="#Employment">Employment</a></li>
+												<li><span>Misc</span>
+													<ul>
+															<li  class="active"><a href="#">Timeline</a></li>
+															<li  class="active"><a href="https://github.com/toperkin">Github</a></li>
+													</ul>
+												</li>
+											</ul>
+										</nav>
+									<!-- /Nav -->
+
+								</div>
+							<!-- /Header -->
+
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- /Header Wrapper -->
+
+		<!-- Main Wrapper -->
+			<div class="wrapper style3">
+				<div class="title" id="timeline">Timeline</div>
+				<div id="main" class="container">
+<!-- Features -->
+					<div class="feature-list article-list">
+
+	<div id="chartContainer" style="height: 600px; width: 100%;"></div>
+
+					</div>
+				</div>
+			</div>
+		<!-- /Main Wrapper -->
+
+
+
+    	<!-- Scripts -->
+			<script src="js/jquery.min.js"></script>
+			<script src="js/jquery.dropotron.min.js"></script>
+			<script src="js/skel.min.js"></script>
+			<script src="js/skel-viewport.min.js"></script>
+			<script src="js/util.js"></script>
+			<!--[if lte IE 8]><script src="js/ie/respond.min.js"></script><![endif]-->
+			<script src="js/main.js"></script>
+	</body>
+</html>
